@@ -143,7 +143,7 @@ void asyncLoop()
 void dataCallback(void* data, uint32_t length)
 {
     uint8_t *values = (uint8_t*) data;
-    uint32_t barNum = MIN(length, 6);
+    uint32_t barNum = MIN(length, 7);
 
     for (size_t bar = 0; bar < barNum; bar++)
     {

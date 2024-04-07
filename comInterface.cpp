@@ -17,7 +17,7 @@
 #include "specificRegisters.h"
 
 // Defines
-#define HOUT_NUMBER_OF_CHANNELS 6                                                                 // number of channels for the H_OUT stream
+#define HOUT_NUMBER_OF_CHANNELS 7                                                                 // number of channels for the H_OUT stream
 #define HOUT_ELEMENT_SIZE 1                                                                       // size in bytes of one element for the H_OUT stream
 #define HOUT_BUFFER_ELEMENTS_MAX 1                                                                // max number of elements in the buffer for the H_OUT stream
 #define HOUT_BUFFER_SIZE (HOUT_BUFFER_ELEMENTS_MAX * HOUT_ELEMENT_SIZE * HOUT_NUMBER_OF_CHANNELS) // size of the buffer in bytes for the H_OUT stream
@@ -51,7 +51,7 @@ CommonDeviceStatus_t g_commonDeviceStatus =
 CommonDeviceInfo_t g_commonDeviceInfo =
     {
         0,                         // H_In_PacketSize
-        5,                         // H_Out_PacketSize
+        6,                         // H_Out_PacketSize
         "SDSource",               // Identifier
         {0, 1, 0},                 // DeviceVersion
         {0, 1, 0},                 // ProtocolVersion

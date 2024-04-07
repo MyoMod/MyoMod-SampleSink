@@ -51,7 +51,7 @@ void display_init(float brightness, std::span<uint32_t, 7>* colors)
 
 void display_updateColors(std::span<uint32_t, 7> colors)
 {
-    for (uint32_t i = 0; i < 7; i++)
+    for (uint32_t i = 0; i <= 7; i++)
     {
         g_colors[i] = colors[i];
     }
@@ -67,7 +67,7 @@ void display_clearBar(uint32_t barIndex)
 
 void display_drawBar(uint32_t barIndex, uint32_t value)
 {
-    assert(barIndex < 7);
+    assert(barIndex <= 7);
 
     // map 0-100 to 0-16
     uint32_t barHeight = value * 16 / 100;
