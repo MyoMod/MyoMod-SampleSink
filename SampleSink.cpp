@@ -129,11 +129,11 @@ void asyncLoop()
     {
         g_sync = false;
         gpio_put(DEBUG_PIN1, 1);
-        uint8_t data[4] = {0};
+        uint8_t data;
         for (size_t i = 0; i < 4; i++)
         {
-            data[i] = !gpio_get(BUTTON_PINS[i]);
-            comInterfaceAddSample(data, i);
+            data= !gpio_get(BUTTON_PINS[i]);
+            comInterfaceAddSample(&data, i);
         }
         
         gpio_put(DEBUG_PIN1, 0);
